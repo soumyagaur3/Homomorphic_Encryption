@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homomorphic Encryption</title>
+</head>
+<body>
+    <div class="Heading">
+	<h1>Homomorphic Encryption</h1>
+    </div>
+    <form method="POST" action="/">
+	<div class="d1">
+	   <label for="input1" class="l1">pt 1 :- </label>
+ 	   <input type="text" id="input1" class="i1" name="input1"></input>
+	   <p>+</p>
+	   <label for="input3" class="l2">cst 1 :- </label>
+	   <input type="text" id="input3" class="i3" name="input3"></input>
+	</div>
+	<div class="d2">
+	   <label for="input2" class="l2">pt 2 :- </label>
+	   <input type="text" id="input2" class="i2" name="input2"></input>
+	   <p>*</p>
+	   <label for="input4" class="l4">cst 2 :- </label>
+	   <input type="text" id="input4" class="i4" name="input4"></input>
+	   </div>
+	<button type="submit">Encrypt & Compute</button>
+    </form>
+
+    <div class="output">
+    {% if output %}
+    <h2 class="ot">Output:</h2>
+    <p>{{ output }}</p>
+    {% endif %}
+    </div>
+</body>
+</html>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  background: #98D9C2;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.d1 , .d2{
+  display: flex;
+  flex-direction: row;
+}
+
+.d1 p {
+  font-size: 3em;
+  margin-left: 50px;
+}
+.d2 p {
+  font-size: 3em;
+  margin-left: 50px;
+}
+.Heading {
+  background: #E1B07E;
+  padding: 20px;
+  margin: 20px 25%;
+  text-align: center;
+  border-radius: 20px;
+}
+.Heading h1 {
+  background: #E1B07E;
+  font-size: 50px;
+}
+form {
+  margin: 10% 5%;
+  margin-bottom: 0%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 40vh;
+}
+form div {
+}
+label {
+  margin-left: 1em;
+}
+button {
+  background: #d9d9d9;
+  width: 20%;
+  border: none;
+  cursor: pointer;
+  height: 3em;
+  font-size: 30px;
+  margin-left: 35%;
+}
+input {
+  border: 0;
+  font-size: 2.3em;
+  background: #d9d9d9;
+  padding: 7px 0px;
+  margin-left: 1.2em;
+}
+.output {
+  margin: 0px 10%;
+}
+.output p {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.dc1 , .dc2 {
+  font-weight: 700;
+}
+
+.output .otp {
+  font-weight: 700;
+}
+form .l1 , .l2 , .l3 , .l4{
+  font-size: 50px;
+}
+</style>
